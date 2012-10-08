@@ -46,4 +46,13 @@ class TopicsControllerTest extends ControllerTestCase {
 		$this->assertTag($expected, $result);
 	}
 
+	/**
+	 * @expectedException NotFoundException
+	 * @expectedExceptionMessage Invalid topic
+	 */
+	public function test存在しないトピックを表示するとNotFoundになる()
+	{
+		$this->testAction('/topics/view/999');
+	}
+
 }
