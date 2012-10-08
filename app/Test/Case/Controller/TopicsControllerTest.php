@@ -18,44 +18,18 @@ class TopicsControllerTest extends ControllerTestCase {
 		'app.comment'
 	);
 
-/**
- * testIndex method
- *
- * @return void
- */
-	public function testIndex() {
-	}
-
-/**
- * testView method
- *
- * @return void
- */
-	public function testView() {
-	}
-
-/**
- * testAdd method
- *
- * @return void
- */
-	public function testAdd() {
-	}
-
-/**
- * testEdit method
- *
- * @return void
- */
-	public function testEdit() {
-	}
-
-/**
- * testDelete method
- *
- * @return void
- */
-	public function testDelete() {
+	public function testトピック一覧を表示できる()
+	{
+		$result = $this->testAction('/topics/index', array('return' => 'vars'));
+		$topics = $result['topics'];
+		$this->assertCount(7, $topics);
+		$this->assertEquals('新しいパソコン', $topics[0]['Topic']['title']);
+		$this->assertEquals('新しい携帯電話', $topics[1]['Topic']['title']);
+		$this->assertEquals('格好良いスマートフォン', $topics[2]['Topic']['title']);
+		$this->assertEquals('はじめてのPHP', $topics[3]['Topic']['title']);
+		$this->assertEquals('はじめてのWindows', $topics[4]['Topic']['title']);
+		$this->assertEquals('CG入門', $topics[5]['Topic']['title']);
+		$this->assertEquals('好きなお寿司は？', $topics[6]['Topic']['title']);
 	}
 
 }
