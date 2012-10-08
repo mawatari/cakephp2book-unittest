@@ -32,4 +32,18 @@ class TopicsControllerTest extends ControllerTestCase {
 		$this->assertEquals('好きなお寿司は？', $topics[6]['Topic']['title']);
 	}
 
+	public function testトピック一覧はtableタグで表示する()
+	{
+		$result = $this->testAction('/topics/index', array('return' => 'view'));
+		$expected = array(
+			'tag' => 'div',
+			'attributes' => array('class' => 'topics index'),
+			'child' => array(
+				'tag' => 'table',
+				'children' => array('count' => 8),
+			)
+		);
+		$this->assertTag($expected, $result);
+	}
+
 }
