@@ -55,4 +55,10 @@ class TopicsControllerTest extends ControllerTestCase {
 		$this->testAction('/topics/view/999');
 	}
 
+	public function test削除が成功したらindexにリダイレクトする()
+	{
+		$this->testAction('/topics/delete/1', array('method' => 'post'));
+		$this->assertRegExp('/topics$/', $this->headers['Location']);
+	}
+
 }
