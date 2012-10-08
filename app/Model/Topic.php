@@ -84,4 +84,14 @@ class Topic extends AppModel {
 		)
 	);
 
+	public function getLatest()
+	{
+		$option = array(
+			'conditions' => array('Topic.category_id' => 1),
+			'order' => array('Topic.created desc'),
+			'limit' => 5
+		);
+		return $this->find('all', $option);
+	}
+
 }
