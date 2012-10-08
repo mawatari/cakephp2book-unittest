@@ -31,11 +31,45 @@ class TopicFixture extends CakeTestFixture {
 	public $records = array(
 		array(
 			'id' => 1,
-			'title' => 'Lorem ipsum dolor sit amet',
-			'body' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
+			'title' => '新しいパソコン',
 			'category_id' => 1,
-			'created' => '2012-10-08 19:19:06',
-			'modified' => '2012-10-08 19:19:06'
+			'created' => '2012-10-05 16:52:07',
+		),
+		array(
+			'id' => 2,
+			'title' => '新しい携帯電話',
+			'category_id' => 1,
+			'created' => '2012-10-05 16:52:09',
+		),
+		array(
+			'id' => 3,
+			'title' => '格好良いスマートフォン',
+			'category_id' => 1,
+			'created' => '2012-10-05 16:52:10',
+		),
+		array(
+			'id' => 4,
+			'title' => 'はじめてのPHP',
+			'category_id' => 1,
+			'created' => '2012-10-05 16:52:11',
+		),
+		array(
+			'id' => 5,
+			'title' => 'はじめてのWindows',
+			'category_id' => 1,
+			'created' => '2012-10-05 16:52:12',
+		),
+		array(
+			'id' => 6,
+			'title' => 'CG入門',
+			'category_id' => 1,
+			'created' => '2012-10-05 16:52:13',
+		),
+		array(
+			'id' => 7,
+			'title' => '好きなお寿司は？',
+			'category_id' => 2,
+			'created' => '2012-10-05 16:52:15',
 		),
 	);
 
