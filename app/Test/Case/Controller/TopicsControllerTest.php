@@ -61,4 +61,11 @@ class TopicsControllerTest extends ControllerTestCase {
 		$this->assertRegExp('/topics$/', $this->headers['Location']);
 	}
 
+	public function test新しいトピックを追加する()
+	{
+		$data = array('Topic' => array('title' => '新しいトピックタイトル'));
+		$this->testAction('/topics/add', array('data' => $data, 'method' => 'post'));
+		$this->assertContains('The topic has been saved', $this->controller->Session->read('Message.flash'));
+	}
+
 }
